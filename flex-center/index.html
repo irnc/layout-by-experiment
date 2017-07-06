@@ -2,6 +2,8 @@
 <html>
   <head>
     <meta charset="utf-8">
+    <!-- https://developer.mozilla.org/en/docs/Mozilla/Mobile/Viewport_meta_tag -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title></title>
     <style>
       body {
@@ -35,6 +37,11 @@
           // On ZTE phone (independent of an address bar visibility)
           // - portrait 980x1556
           // - landscape 980x541
+          /*
+            With added viewport: width=device-width, initial-scale=1
+            - portrait 320x508
+            - landscape 534x295
+          */
           out.textContent = (el.offsetWidth + ' x ' + el.offsetHeight);
         }, 100);
       </script>
