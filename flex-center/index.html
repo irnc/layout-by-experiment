@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <style>
+      body {
+        /* reset default user agent margin */
+        margin: 0;
+      }
+      .full-viewport {
+        height: 100vh;
+      }
+      .Aligner {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .Aligner-item {
+        max-width: 50%;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- https://philipwalton.github.io/solved-by-flexbox/demos/vertical-centering/ -->
+    <div class="Aligner full-viewport">
+      <div class="Aligner-item">Here will be something...</div>
+      <div id="viewport-output"></div>
+      <script>
+        const el = document.querySelector('.full-viewport');
+        const out = document.getElementById('viewport-output');
+
+        setInterval(() => {
+          // On ZTE phone (independent of an address bar visibility)
+          // - portrait 980x1556
+          // - landscape 980x541
+          out.textContent = (el.offsetWidth + ' x ' + el.offsetHeight);
+        }, 100);
+      </script>
+    </div>
+  </body>
+</html>
