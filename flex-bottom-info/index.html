@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <style media="screen">
+      .cell {
+        width: 50vw;
+        height: 50vh;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+      }
+
+      .extrisic-size {
+        height: 100%;
+        outline: 5px solid -webkit-focus-ring-color;
+      }
+
+      .intrinsic-size {
+        margin-top: 5px;
+      }
+
+      /* debug styles */
+      .extrisic-border {
+        box-sizing: border-box;
+        border: 2px solid navy;
+      }
+
+      .intrinsic-border {
+        box-sizing: border-box;
+        border: 2px solid blue;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="cell">
+      <div class="extrisic-size extrisic-border">
+        <div style="overflow: hidden">
+          Here will be embedded media.
+          <!-- <img width="1000" height="1000" style="background-color: gray" /> -->
+        </div>
+      </div>
+      <div class="intrinsic-size intrinsic-border">
+        First line.<br />
+        Second line.
+      </div>
+    </div>
+    <p>following paragraph</p>
+  </body>
+</html>
